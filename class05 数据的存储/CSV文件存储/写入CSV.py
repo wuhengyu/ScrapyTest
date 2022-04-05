@@ -15,3 +15,13 @@ with open('write_csv_data.csv', 'w') as csvfile:
     writer.writerow(['4', 'wuhengyu4', '44'])
     # 二维列表
     writer.writerows([['1', 'wuhengyu1', '11'], ['1', 'wuhengyu1', '11'], ['1', 'wuhengyu1', '11']])
+
+# 字典写入
+with open('write_csv_data_zidian.csv', 'w') as csvfile:
+    fieldnames = ['id', 'name', 'age']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({'id': '1', 'name': 'zidian', 'age': '111'})
+    writer.writerow({'id': '1', 'name': 'zidian', 'age': '111'})
+    writer.writerow({'id': '1', 'name': 'zidian', 'age': '111'})
+    writer.writerow({'id': '1', 'name': 'zidian', 'age': '111'})
