@@ -6,16 +6,17 @@
 # @Desc    :
 
 import json
+
 data = [{
-    "name":"wuhengyu1",
-    "age":"18",
-    "school":"Peking University",
-    "birthday":"1993-10-18"
-},{
-    "name":"wuhengyu2",
-    "age":"28",
-    "school":"Tsinghua University",
-    "birthday":"1995-10-18"
+    "name": "wuhengyu1",
+    "age": "18",
+    "school": "Peking University",
+    "birthday": "1993-10-18"
+}, {
+    "name": "wuhengyu2",
+    "age": "28",
+    "school": "Tsinghua University",
+    "birthday": "1995-10-18"
 }]
 # dumps:将json对象转化成字符串，并写入
 with open('write_json_data_dumps.json', 'w', encoding='utf-8') as file:
