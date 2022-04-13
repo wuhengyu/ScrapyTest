@@ -76,7 +76,7 @@ print(data4[0]['name'])
 print(data4[1].get('school'))
 
 
-# Json字符串的标识需要使用双引号，单引号报错json.decoder.JSONDecodeError
+# # Json字符串的标识需要使用双引号，单引号报错json.decoder.JSONDecodeError
 # print(f'{"=" * 100}')
 # str_json3 = '''
 # [{

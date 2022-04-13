@@ -18,6 +18,7 @@ data = [{
     "school": "Tsinghua University",
     "birthday": "1995-10-18"
 }]
+print(type(data))
 # dumps:将json对象转化成字符串，并写入
 with open('write_json_data_dumps.json', 'w', encoding='utf-8') as file:
     file.write(json.dumps(data, indent=2, ensure_ascii=False))
