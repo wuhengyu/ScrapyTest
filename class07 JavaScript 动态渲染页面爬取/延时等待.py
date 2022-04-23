@@ -17,13 +17,13 @@ from selenium.webdriver.common.by import By
 # 显式等待, 10秒加载出来节点属性就返回该节点
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-# browser = webdriver.Chrome()
-# browser.get('https://www.taobao.com')
-# wait = WebDriverWait(browser, 10)
-# input = wait.until(EC.presence_of_element_located((By.ID, 'q')))
-# button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))
-# print(input, button)
-# browser.close()
+browser = webdriver.Chrome()
+browser.get('https://www.taobao.com')
+wait = WebDriverWait(browser, 10)
+input = wait.until(EC.presence_of_element_located((By.ID, 'q')))
+button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))
+print(input, button)
+browser.close()
 
 # 等待条件
 # 标题是某内容
