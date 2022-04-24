@@ -45,6 +45,7 @@ def get_offset_threshold(image_width):
 
 def main():
     image_raw = cv2.imread('img.png')
+    # image_raw = cv2.imread('captcha.png')
     image_height, image_width, _ = image_raw.shape
     image_gaussian_blur = get_gaussian_blur_image(image_raw)
     image_canny = get_canny_image(image_gaussian_blur)
@@ -55,8 +56,15 @@ def main():
     arc_length_min, arc_length_max = get_arc_length_threshold(image_width, image_height)
     offset_min, offset_max = get_offset_threshold(image_width)
     offset = None
+    n = 0
     for contour in contours:
+        n += 1
         x, y, w, h = cv2.boundingRect(contour)
+        print("x, y, w, h:", x, y, w, h)
+        print("contour_area_min:", contour_area_min)
+        print("contour_area_max:", contour_area_max)
+        print(f"cv2.contourArea(contour):第{n}次", cv2.contourArea(contour))
+        n += 1
         if contour_area_min < cv2.contourArea(contour) < contour_area_max and \
                 arc_length_min < cv2.arcLength(contour, True) < arc_length_max and \
                 offset_min < x < offset_max:
