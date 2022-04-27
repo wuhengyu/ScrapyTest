@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2022/4/25 22:11
+# @Time    : 2022/4/27 15:21
 # @Author  : Walter
-# @File    : task绑定回调.py
+# @File    : 直接使用result获取结果.py
 # @License : (C)Copyright Walter
 # @Desc    :
 import asyncio
@@ -21,18 +21,14 @@ async def request():
     return response
 
 
-def callback(tasks):
-    print('结果:', tasks.result())
-
-
 coroutine = request()
 tasks = asyncio.ensure_future(coroutine)
-tasks.add_done_callback(callback)
 print(tasks)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(tasks)
 print(tasks)
+print(tasks.result())
 
 end_time = time.time()
 logging.info('花费时间 %s 秒', end_time - start_time)
