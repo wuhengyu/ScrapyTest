@@ -70,7 +70,7 @@ class Tester(object):
         test main method
         :return:
         """
-        # event loop of aiohttp
+        # event loop of aiohttp的使用
         logger.info('stating tester...')
         count = self.redis.count()
         logger.debug(f'{count} proxies to test')

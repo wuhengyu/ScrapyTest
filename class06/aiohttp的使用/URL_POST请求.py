@@ -1,23 +1,19 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2022/4/28 00:33
+# @Time    : 2022/4/29 13:30
 # @Author  : Walter
-# @File    : aiohttp基本实例.py
+# @File    : URL_POST请求.py
 # @License : (C)Copyright Walter
 # @Desc    :
 import aiohttp
 import asyncio
+
 from aiohttp import TCPConnector
 
-
-async def fetch(session, url):
-    async with session.get(url) as response:
-        return await response.text(), response.status
-
 async def main():
+    data = {'name': 'germey', 'age': 25}
     async with aiohttp.ClientSession(connector=TCPConnector(ssl=False)) as session:
-        html, status = await fetch(session, 'https://cuiqingcai.com')
-        print(f'html:{html[:10]}...')
-        print(f'status:{status}')
+        async with session.post('https://www.httpbin.org/post', data=data) as response:
+            print(await response.text())
 
 if __name__ == '__main__':
     # 旧版本python

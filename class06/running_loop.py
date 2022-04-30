@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/4/25 23:25
 # @Author  : Walter
-# @File    : aiohttp_running_loop.py
+# @File    : running_loop.py
 # @License : (C)Copyright Walter
 # @Desc    :
 
@@ -14,6 +14,7 @@ from aiohttp import TCPConnector
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
 
 start_time = time.time()
+
 async def get(url):
     session = aiohttp.ClientSession(connector=TCPConnector(ssl=False))
     response = await session.get(url)
