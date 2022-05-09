@@ -18,8 +18,8 @@ import urllib.request
 
 # data参数
 # bytes方法把参数转化为字节流编码格式
-# data = bytes(urllib.parse.urlencode({'name': 'germey'}), encoding='utf-8')
-# response = urllib.request.urlopen('https://www.httpbin.org/post', data=data)
+# data.md = bytes(urllib.parse.urlencode({'name': 'germey'}), encoding='utf-8')
+# response = urllib.request.urlopen('https://www.httpbin.org/post', data.md=data.md)
 # print(response.read().decode())
 
 # timeout参数
@@ -42,13 +42,13 @@ import urllib.request
 # dict = {
 #     'name': 'germey'
 # }
-# data = bytes(urllib.parse.urlencode(dict), encoding='utf-8')
+# data.md = bytes(urllib.parse.urlencode(dict), encoding='utf-8')
 # # 案例1
-# req1 = urllib.request.Request(url=url, data=data, headers=headers, method='POST')
+# req1 = urllib.request.Request(url=url, data.md=data.md, headers=headers, method='POST')
 # response1 = request.urlopen(req1)
 # print(response1.read().decode())
 # # 案例2
-# req2 = urllib.request.Request(url=url, data=data, method='POST')
+# req2 = urllib.request.Request(url=url, data.md=data.md, method='POST')
 # req2.add_header('User-Agent',
 #                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36')
 # response2 = request.urlopen(req2)

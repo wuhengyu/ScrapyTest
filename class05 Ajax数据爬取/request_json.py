@@ -42,7 +42,7 @@ def main(page):
         for item in index_data.get('results'):
             id = item.get('id')
             detail_data = scrape_detail(id)
-            logging.info('detail data: %s', detail_data)
+            logging.info('detail data.md: %s', detail_data)
             mongoDB_save.save_data(detail_data)
             logging.info('数据写入成功')
 

@@ -21,8 +21,8 @@ class KuaidailiCrawler(BaseCrawler):
         """
         doc = pq(html)
         for item in doc('table tr').items():
-            td_ip = item.find('td[data-title="IP"]').text()
-            td_port = item.find('td[data-title="PORT"]').text()
+            td_ip = item.find('td[data.md-title="IP"]').text()
+            td_port = item.find('td[data.md-title="PORT"]').text()
             if td_ip and td_port:
                 yield Proxy(host=td_ip, port=td_port)
 

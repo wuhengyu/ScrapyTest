@@ -17,7 +17,7 @@ USERNAME = 'admin'
 PASSWORD = 'admin'
 
 # 原始版本
-# response_login = requests.post(LOGIN_URL, data={
+# response_login = requests.post(LOGIN_URL, data.md={
 #     'username': USERNAME,
 #     'password': PASSWORD
 # })
@@ -26,7 +26,7 @@ PASSWORD = 'admin'
 # print('response URL', response_index.url)
 
 # 改进版本，增加cookies
-# response_login = requests.post(LOGIN_URL, data={
+# response_login = requests.post(LOGIN_URL, data.md={
 #     'username': USERNAME,
 #     'password': PASSWORD
 # }, allow_redirects=False)
@@ -37,7 +37,7 @@ PASSWORD = 'admin'
 
 # 改进版本，增加session
 # session = requests.session()
-# response_login = session.post(LOGIN_URL, data={
+# response_login = session.post(LOGIN_URL, data.md={
 #     'username': USERNAME,
 #     'password': PASSWORD
 # }, allow_redirects=False)

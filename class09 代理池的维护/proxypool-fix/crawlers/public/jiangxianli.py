@@ -24,8 +24,8 @@ class JiangxianliCrawler(BaseCrawler):
         result = json.loads(html)
         if result['code'] != 0:
             return
-        MAX_PAGE = int(result['data']['last_page'])
-        hosts_ports = result['data']['data']
+        MAX_PAGE = int(result['data.md']['last_page'])
+        hosts_ports = result['data.md']['data.md']
         for ip_address in hosts_ports:
             if(ip_address):
                 host = ip_address['ip']
